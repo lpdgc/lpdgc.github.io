@@ -6,14 +6,16 @@ layout: post
 
 <script>
 	function sheetsLoaded() {
-		$("#docs-chrome").remove();
-		$("#grid-bottom-bar").remove();
+		setTimeout(function() {
+		  	$("#docs-chrome").remove();
+			$("#grid-bottom-bar").remove();
+		}, 5000);
 	}
 
-	window.addEventListener('load', function() {
-		$("#docs-chrome").remove();
-		$("#grid-bottom-bar").remove();
-	})
+	//window.addEventListener('load', function() {
+		//$("#docs-chrome").remove();
+		//$("#grid-bottom-bar").remove();
+	//})
 </script>
 
 <div>
