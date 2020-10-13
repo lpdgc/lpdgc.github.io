@@ -7,8 +7,8 @@ layout: post
 <script>
 	function sheetsLoaded() {
 		setTimeout(function() {
-		  	$("#docs-chrome").remove();
-			$("#grid-bottom-bar").remove();
+			$("#volunteerSheet").contents().find("#docs-chrome").remove();
+			$("#volunteerSheet").contents().find("#grid-bottom-bar").remove();
 		}, 5000);
 	}
 
@@ -20,6 +20,6 @@ layout: post
 
 <div>
   <div style="position:relative;padding-top:56.25%;">
-	<iframe onload="sheetsLoaded()" src="https://docs.google.com/spreadsheets/d/11r-HCPUBABmBbg2WohHykYXRz78SwVJoqahv0zdCwUY/edit?usp=sharing" frameborder="0" allow="fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+	<iframe id="volunteerSheet" onload="sheetsLoaded()" src="https://docs.google.com/spreadsheets/d/11r-HCPUBABmBbg2WohHykYXRz78SwVJoqahv0zdCwUY/edit?usp=sharing" frameborder="0" allow="fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
   </div>
 </div>
