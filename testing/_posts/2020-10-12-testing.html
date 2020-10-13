@@ -4,16 +4,20 @@ author: LPDGC Board
 layout: post
 ---
 
-<div>
-  <div style="position:relative;padding-top:56.25%;">
-	<iframe src="https://docs.google.com/spreadsheets/d/11r-HCPUBABmBbg2WohHykYXRz78SwVJoqahv0zdCwUY/edit?usp=sharing" frameborder="0" allow="fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-</div>
-
 <script>
+	function sheetsLoaded() {
+		$("#docs-chrome").remove();
+		$("#grid-bottom-bar").remove();
+	}
+
 	window.addEventListener('load', function() {
-		let chrome = $("#docs-chrome");
-		chrome.remove();
+		$("#docs-chrome").remove();
 		$("#grid-bottom-bar").remove();
 	})
 </script>
+
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+	<iframe onload="sheetsLoaded()" src="https://docs.google.com/spreadsheets/d/11r-HCPUBABmBbg2WohHykYXRz78SwVJoqahv0zdCwUY/edit?usp=sharing" frameborder="0" allow="fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+</div>
